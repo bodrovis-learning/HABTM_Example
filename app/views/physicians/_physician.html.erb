@@ -1,0 +1,5 @@
+<li>
+  Name: <%= physician.name %>
+  <%= link_to 'Show', physician_path(physician) %>
+  <%= link_to 'Delete', physician_path(physician), data: {method: :delete} %>
+</li>

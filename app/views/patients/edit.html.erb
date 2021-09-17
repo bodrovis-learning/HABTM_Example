@@ -1,0 +1,13 @@
+<div style="background-color: white">
+  <h1>Edit patient</h1>
+
+  <%= form_with model: @patient do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <label>Physicians:</label>
+    <%= f.collection_check_boxes :physician_ids, Physician.all, :id, :name %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

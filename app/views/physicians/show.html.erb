@@ -1,0 +1,9 @@
+<div style="background-color: white">
+  <h1><%= @physician.name %></h1>
+
+  <ul>
+    <% @physician.patients.each do |patient| %>
+      <li>Name: <%= patient.name %> <%= link_to 'Edit', edit_patient_path(patient) %></li>
+    <% end %>
+  </ul>
+</div>
